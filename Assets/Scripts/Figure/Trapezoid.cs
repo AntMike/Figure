@@ -11,11 +11,12 @@ namespace FigureTest.Figures
         public float sideB;
         public float hight;
 
-        public Trapezoid(float _sideA, float _sideB, float _height, Color _color)
+        public Trapezoid(float _sideA, float _sideB, float _height, FigureColor _color)
         {
             sideA = Mathf.Abs(_sideA);
             sideB = Mathf.Abs(_sideB);
             hight = Mathf.Abs(_height);
+            figureTypeName = FigureType.Trapezoid;
             FigureColor = _color;
         }
 

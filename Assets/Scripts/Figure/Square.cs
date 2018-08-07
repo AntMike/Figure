@@ -8,9 +8,10 @@ namespace FigureTest.Figures
 
         public float sides;
 
-        public Square(float _sides, Color _color)
+        public Square(float _sides, FigureColor _color)
         {
             sides = Mathf.Abs(_sides);
+            figureTypeName = FigureType.Square;
             FigureColor = _color;
         }
 

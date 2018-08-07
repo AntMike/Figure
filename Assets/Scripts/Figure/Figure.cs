@@ -9,9 +9,9 @@ namespace FigureTest.Figures
     {
         public FigureType figureTypeName;
         private List<string> figureUnique = new List<string>() { "side length", "hypotenuse", "middle line", "radius" };
-        private Color _figureColor;
+        private FigureColor _figureColor;
 
-        public Color FigureColor
+        public FigureColor FigureColor
         {
             get { return _figureColor; }
             set { _figureColor = value; }
@@ -20,9 +20,10 @@ namespace FigureTest.Figures
         /// <summary>
         /// Return the line with all info about figure
         /// </summary>
-        public virtual string DrawFigure(FigureType _type, float _area, float _unique, Color _color)
+        public virtual string DrawFigure(FigureType _type, float _area, float _unique, FigureColor _color)
         {
-            var line = "Figure: " + _type.ToString() + ", area: " + " sq. units, " + figureUnique[(int)_type] + ": " + _unique + " units, color: " + _color.ToString();
+            var line = "Figure: " + _type.ToString() + ", area: " + System.Math.Round(_area, 2) + " sq. units, " + figureUnique[(int)_type] + ": "
+                + System.Math.Round(_unique, 2)  +" units, color: " + _color.ToString();
             return line;
         }
 
@@ -46,6 +47,17 @@ namespace FigureTest.Figures
         Triangle,
         Circle,
         Trapezoid,
+        Count
+    }
+    public enum FigureColor
+    {
+        Red,
+        Green,
+        Blue,
+        Black,
+        White,
+        Orange,
+        Yellow,
         Count
     }
 }

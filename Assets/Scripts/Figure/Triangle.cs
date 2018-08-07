@@ -8,10 +8,11 @@ namespace FigureTest.Figures
         public float sideA;
         public float sideB;
 
-        public Triangle(float _sideA, float _sideB, Color _color)
+        public Triangle(float _sideA, float _sideB, FigureColor _color)
         {
             sideA =Mathf.Abs(_sideA);
             sideB = Mathf.Abs(_sideB);
+            figureTypeName = FigureType.Triangle;
             FigureColor = _color;
         }
 

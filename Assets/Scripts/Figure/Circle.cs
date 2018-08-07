@@ -7,9 +7,10 @@ namespace FigureTest.Figures
     {
         public float radius;
 
-        public Circle(float _radius, Color _color)
+        public Circle(float _radius, FigureColor _color)
         {
             radius = Mathf.Abs(_radius);
+            figureTypeName = FigureType.Circle;
             FigureColor = _color;
         }
 
