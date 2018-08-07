@@ -7,6 +7,9 @@ namespace FigureTest.Figures
     {
         public float radius;
 
+        /// <summary>
+        /// Take radius and color of circle
+        /// </summary>
         public Circle(float _radius, FigureColor _color)
         {
             radius = Mathf.Abs(_radius);
@@ -19,9 +22,12 @@ namespace FigureTest.Figures
             return Mathf.PI * radius * radius;
         }
 
+        /// <summary>
+        /// Returns circle radius
+        /// </summary>
         public override float UniqueFunction()
         {
-            return 2 * Mathf.PI * radius;
+            return radius;
         }
     }
 }

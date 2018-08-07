@@ -8,7 +8,7 @@ namespace FigureTest.Figures
     public abstract class Figure : MonoBehaviour
     {
         public FigureType figureTypeName;
-        private List<string> figureUnique = new List<string>() { "side length", "hypotenuse", "middle line", "radius" };
+        private List<string> figureUnique = new List<string>() { "side length", "hypotenuse", "radius", "middle line" };
         private FigureColor _figureColor;
 
         public FigureColor FigureColor
